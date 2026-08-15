@@ -19,9 +19,7 @@ class Solution {
             return false;
         }
         boolean n=check(root,subRoot);
-        boolean l=check(root.left,subRoot);
-        boolean r=check(root.right,subRoot);
-        return l||r||n||isSubtree(root.left,subRoot)||isSubtree(root.right,subRoot);
+        return n||isSubtree(root.left,subRoot)||isSubtree(root.right,subRoot);
     }
     public boolean check(TreeNode root,TreeNode subRoot){
         if(root==null && subRoot==null){
